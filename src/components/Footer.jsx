@@ -86,7 +86,7 @@ export default function Footer() {
             </a>
 
           </div>
-          <div className="footer-copy">© {new Date().getFullYear()} Savella. All rights reserved.</div>
+          <div className="footer-copy">© {new Date().getFullYear()} Savella Events. All rights reserved.</div>
         </div>
       </div>
     </footer>

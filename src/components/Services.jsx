@@ -25,7 +25,7 @@ export default function Services() {
       <div className="container">
         <div className="section-head">
           <h2>Services that scale with your vision</h2>
-          <p>Choose full-service or modular support—we’ll meet you where you are.</p>
+          <p>Choose full-service or modular support-we’ll meet you where you are.</p>
         </div>
 
         <div className="cards-grid">

@@ -7,7 +7,7 @@ export default function About() {
         <div className="section-head">
           <h2>Crafted planning. Flawless execution.</h2>
           <p>
-            We’re a dedicated team that coordinates every detail—so you can enjoy the moment.
+            We’re a dedicated team that coordinates every detail-so you can enjoy the moment.
             Our approach blends elegant design, operational clarity, and hands-on leadership.
           </p>
         </div>
@@ -16,7 +16,7 @@ export default function About() {
           <div className="about-card">
             <div className="about-icon">✦</div>
             <h3>Creative direction</h3>
-            <p>Concepts, themes, décor styling, and branding—tailored to your vision.</p>
+            <p>Concepts, themes, décor styling, and branding-tailored to your vision.</p>
           </div>
           <div className="about-card">
             <div className="about-icon">✓</div>

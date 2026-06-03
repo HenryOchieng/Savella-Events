@@ -32,7 +32,7 @@ export default function Contact() {
       <div className="container">
         <div className="section-head">
           <h2>Request a quote</h2>
-          <p>Tell us about your event—we’ll respond with next steps and a tailored plan.</p>
+          <p>Tell us about your event-we’ll respond with next steps and a tailored plan.</p>
         </div>
 
         <div className="contact-grid">
@@ -102,7 +102,7 @@ export default function Contact() {
 
           <aside className="contact-side">
             <div className="contact-card">
-              <div className="contact-card-title">Savella</div>
+              <div className="contact-card-title">Savella Events</div>
               <div className="contact-line">Event management • Planning • Production</div>
               <div className="contact-line">Email: hello@savella.example</div>
               <div className="contact-line">Phone: +1 (555) 012-3456</div>
