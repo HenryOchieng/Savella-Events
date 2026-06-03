@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaWhatsapp, FaInstagram, FaFacebook, FaTiktok, FaYoutube } from 'react-icons/fa'
+import logoImg from '../assets/logo.jpeg'
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
         <div>
           <div className="footer-brand">
             <span className="brand-mark" aria-hidden>
-              S
+              <img src={logoImg} alt="Savella logo" />
             </span>
             <span> Savella</span>
           </div>

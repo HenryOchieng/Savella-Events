@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import logoImg from '../assets/logo.jpeg'
 
 const links = [
   { id: 'home', label: 'Home' },
@@ -53,7 +54,7 @@ export default function Navbar() {
           aria-label="Savella home"
         >
           <span className="brand-mark" aria-hidden>
-            S
+            <img src={logoImg} alt="Savella logo" />
           </span>
           <span className="brand-name">Savella Events</span>
         </button>
