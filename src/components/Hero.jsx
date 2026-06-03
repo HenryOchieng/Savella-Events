@@ -43,7 +43,7 @@ export default function Hero() {
               <div className="metric-label">Events delivered</div>
             </div>
             <div className="metric" role="listitem">
-              <div className="metric-num">10+ yrs</div>
+              <div className="metric-num">3+ yrs</div>
               <div className="metric-label">Industry experience</div>
             </div>
             <div className="metric" role="listitem">

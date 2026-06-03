@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaWhatsapp, FaInstagram, FaFacebook, FaTiktok, FaYoutube } from 'react-icons/fa'
 
 export default function Footer() {
   return (
@@ -39,40 +40,49 @@ export default function Footer() {
         <div>
           <div className="footer-social" aria-label="Social links">
             <a
-              href="https://wa.me/"
+              href="https://wa.me/254712345678"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="social-link"
+              aria-label="WhatsApp"
             >
-              <span aria-hidden>🟢</span>
-              <span className="sr-only"></span>
+              <FaWhatsapp size={24} />
             </a>
             <a
-              href="#"
+              href="https://instagram.com/yourpage"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="social-link"
+              aria-label="Instagram"
             >
-              <span aria-hidden>📷</span>
-              <span className="sr-only"></span>
+              <FaInstagram size={24} />
             </a>
             <a
-              href="#"
+              href="https://tiktok.com/@yourpage"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="social-link"
+              aria-label="TikTok"
             >
-              <span aria-hidden>👍</span>
-              <span className="sr-only"></span>
+              <FaTiktok size={24} />
             </a>
             <a
-              href="#"
+              href="https://facebook.com/yourpage"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="social-link"
+              aria-label="Facebook"
             >
-              <span aria-hidden>🎵</span>
-              <span className="sr-only"></span>
+              <FaFacebook size={24} />
+            </a>
+            <a
+              href="https://youtube.com/yourpage"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link"
+              aria-label="Youtube"
+            >
+              <FaYoutube size={24} />
             </a>
 
           </div>
