@@ -1,16 +1,18 @@
 import React, { useMemo, useState } from 'react'
 
+const currency = 'Kshs'
+
 const packages = {
-  wedding: { base: 1800, guestRate: 18 },
-  corporate: { base: 1600, guestRate: 16 },
-  private: { base: 900, guestRate: 12 },
-  gala: { base: 2200, guestRate: 20 },
+  wedding: { base: 180000, guestRate: 1800 },
+  corporate: { base: 160000, guestRate: 1600 },
+  private: { base: 90000, guestRate: 1200 },
+  gala: { base: 220000, guestRate: 2000 },
 }
 
 const extras = [
-  { id: 'decor', label: 'Décor styling', price: 350 },
-  { id: 'lighting', label: 'Lighting & AV', price: 450 },
-  { id: 'coordination', label: 'On-site coordination', price: 300 },
+  { id: 'decor', label: 'Décor styling', price: 35000 },
+  { id: 'lighting', label: 'Lighting & AV', price: 45000 },
+  { id: 'coordination', label: 'On-site coordination', price: 30000 },
 ]
 
 export default function CostEstimator() {
@@ -87,7 +89,7 @@ export default function CostEstimator() {
                     className={`extra-chip ${selectedExtras.includes(item.id) ? 'selected' : ''}`}
                     onClick={() => toggleExtra(item.id)}
                   >
-                    {item.label} +${item.price}
+                    {item.label} +{currency} {item.price.toLocaleString()}
                   </button>
                 ))}
               </div>
@@ -96,14 +98,14 @@ export default function CostEstimator() {
 
           <aside className="estimator-card estimator-summary">
             <p className="estimator-label">Estimated planning investment</p>
-            <h3 className="estimate-price">${estimate.total}</h3>
+            <h3 className="estimate-price">{currency} {estimate.total.toLocaleString()}</h3>
             <p className="estimate-note">This is a planning estimate for a tailored event package.</p>
 
             <ul className="estimate-breakdown">
               {estimate.breakdown.map((item) => (
                 <li key={item.label}>
                   <span>{item.label}</span>
-                  <strong>${item.value}</strong>
+                  <strong>{currency} {item.value.toLocaleString()}</strong>
                 </li>
               ))}
             </ul>
