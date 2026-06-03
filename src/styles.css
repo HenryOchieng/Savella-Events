@@ -145,6 +145,34 @@ button, input, select, textarea{ font: inherit; }
 .events-cta-title{ font-weight: 900; font-size: 18px; }
 .events-cta-sub{ color: var(--muted); margin-top: 4px; }
 
+/* Countdown + FAQ */
+.countdown-banner{
+  display:grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 16px;
+  align-items:center;
+  margin: 18px 0 18px;
+  padding: 18px;
+  border-radius: var(--radius2);
+  border: 1px solid rgba(255,255,255,0.12);
+  background: linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+  box-shadow: var(--shadow);
+}
+.countdown-label{ text-transform: uppercase; letter-spacing: 0.18em; font-size: 12px; color: var(--muted); }
+.countdown-banner h3{ margin: 8px 0 6px; font-size: 24px; }
+.countdown-copy{ color: var(--muted); margin: 0; }
+.countdown-grid{ display:grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.countdown-card{ padding: 12px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.12); background: rgba(0,0,0,0.35); text-align:center; }
+.countdown-card strong{ display:block; font-size: 24px; line-height: 1; }
+.countdown-card span{ display:block; margin-top: 6px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.14em; font-size: 11px; }
+
+.faq-grid{ display:grid; gap: 12px; }
+.faq-item{ border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); overflow:hidden; }
+.faq-question{ width:100%; display:flex; align-items:center; justify-content:space-between; gap: 10px; border:0; background:transparent; color: var(--text); text-align:left; padding: 14px 16px; font-weight: 700; cursor:pointer; }
+.faq-question strong{ font-size: 18px; color: var(--muted); }
+.faq-answer{ margin: 0; padding: 0 16px 16px; color: var(--muted); line-height: 1.65; }
+.faq-item.open{ background: rgba(255,255,255,0.06); }
+
 /* Testimonials */
 .testimonials-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .testimonial{ margin:0; padding: 18px 16px; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); }
@@ -153,8 +181,46 @@ button, input, select, textarea{ font: inherit; }
 .t-name{ font-weight: 900; }
 .t-role{ color: var(--muted); }
 
+/* Cost estimator */
+.estimator-grid{ display:grid; grid-template-columns: 1fr 0.9fr; gap: 14px; }
+.estimator-card{ padding: 18px 16px; border-radius: var(--radius2); border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); box-shadow: var(--shadow); }
+.estimator-card label{ display:flex; flex-direction:column; gap: 8px; color: var(--muted); font-weight: 650; margin-bottom: 12px; }
+.estimator-card select, .estimator-card input[type="range"]{ width:100%; }
+.range-value{ color: var(--text); font-weight: 700; }
+.estimator-label{ color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: 0.16em; margin-bottom: 8px; }
+.extras-grid{ display:flex; flex-wrap:wrap; gap: 8px; }
+.extra-chip{ border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); color: var(--text); border-radius: 999px; padding: 8px 10px; cursor:pointer; }
+.extra-chip.selected{ background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.35); }
+.estimator-summary{ display:flex; flex-direction:column; gap: 8px; }
+.estimate-price{ margin: 0; font-size: 32px; color: var(--text); }
+.estimate-note{ margin: 0; color: var(--muted); }
+.estimate-breakdown{ list-style:none; margin: 8px 0 0; padding: 0; display:grid; gap: 8px; }
+.estimate-breakdown li{ display:flex; justify-content:space-between; gap: 12px; color: var(--muted); border-top: 1px solid rgba(255,255,255,0.08); padding-top: 8px; }
+.estimate-breakdown strong{ color: var(--text); }
+
+/* Booking / Portfolio / Newsletter */
+.booking-grid, .portfolio-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.booking-card, .portfolio-card, .newsletter-card{ padding: 18px 16px; border-radius: var(--radius2); border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); box-shadow: var(--shadow); }
+.booking-label{ color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.18em; }
+.booking-dates{ display:flex; flex-wrap:wrap; gap: 8px; margin-top: 10px; }
+.booking-pill{ border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); color: var(--text); border-radius: 999px; padding: 10px 12px; cursor:pointer; }
+.booking-pill.selected{ background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.35); }
+.booking-summary h3{ margin: 8px 0 6px; font-size: 22px; }
+.booking-summary p{ color: var(--muted); line-height: 1.6; }
+.portfolio-card img{ width:100%; height: 240px; object-fit: cover; border-radius: 16px; border: 1px solid rgba(255,255,255,0.12); }
+.portfolio-copy h3{ margin: 10px 0 6px; font-size: 18px; }
+.portfolio-copy p{ margin: 0 0 6px; color: var(--muted); line-height: 1.55; }
+.newsletter-card{ display:grid; grid-template-columns: 1.1fr 0.9fr; gap: 14px; align-items:center; }
+.newsletter-card h2{ margin: 8px 0 6px; font-size: 24px; }
+.newsletter-card p{ color: var(--muted); }
+.newsletter-form{ display:grid; gap: 8px; }
+.newsletter-message{ color: var(--text); font-size: 13px; }
+
 /* Contact */
 .contact-grid{ display:grid; grid-template-columns: 1.2fr 0.8fr; gap: 14px; }
+
+.whatsapp-float{ position: fixed; right: 18px; bottom: 18px; z-index: 60; display:flex; align-items:center; gap: 8px; padding: 12px 14px; border-radius: 999px; background: linear-gradient(135deg, #25D366, #128C7E); color: #fff; box-shadow: 0 16px 32px rgba(18,140,126,0.35); font-weight: 800; text-decoration:none; }
+.whatsapp-float:hover{ transform: translateY(-1px); }
 .contact-form{ padding: 18px 16px; border-radius: var(--radius2); border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); }
 .form-row{ display:grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
 label{ display:flex; flex-direction:column; gap: 8px; color: var(--muted); font-weight: 650; }
@@ -199,6 +265,8 @@ input:focus, select:focus, textarea:focus{ border-color: rgba(255,255,255,0.35);
   .cards-grid{ grid-template-columns: repeat(2, 1fr); }
   .about-grid{ grid-template-columns: 1fr; }
   .gallery{ grid-template-columns: repeat(2, 1fr); }
+  .estimator-grid, .booking-grid, .portfolio-grid, .newsletter-card{ grid-template-columns: 1fr; }
+  .countdown-banner{ grid-template-columns: 1fr; }
   .testimonials-grid{ grid-template-columns: 1fr; }
   .contact-grid{ grid-template-columns: 1fr; }
   .footer-grid{ grid-template-columns: 1fr; }
@@ -210,6 +278,7 @@ input:focus, select:focus, textarea:focus{ border-color: rgba(255,255,255,0.35);
   .nav-toggle{ display:flex; }
   .gallery{ grid-template-columns: 1fr; }
   .cards-grid{ grid-template-columns: 1fr; }
+  .countdown-grid{ grid-template-columns: repeat(2, 1fr); }
   .form-row{ grid-template-columns: 1fr; }
 }
 

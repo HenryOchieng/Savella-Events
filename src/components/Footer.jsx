@@ -40,15 +40,6 @@ export default function Footer() {
         <div>
           <div className="footer-social" aria-label="Social links">
             <a
-              href="https://wa.me/254712345678"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-link"
-              aria-label="WhatsApp"
-            >
-              <FaWhatsapp size={24} />
-            </a>
-            <a
               href="https://instagram.com/yourpage"
               target="_blank"
               rel="noopener noreferrer"

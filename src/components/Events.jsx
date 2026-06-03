@@ -1,11 +1,9 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import img1 from '../assets/1.jpeg'
 import img2 from '../assets/2.jpeg'
 import img3 from '../assets/3.jpeg'
 
 const events = [
-
-
   { title: 'Corporate Gala', tag: 'Brand Experience', color: 'a', img: img1 },
   { title: 'Modern Wedding', tag: 'Décor + Planning', color: 'b', img: img2 },
   { title: 'Launch Night', tag: 'Production', color: 'c', img: img3 },
@@ -15,7 +13,39 @@ const events = [
 
 ]
 
+function getCountdownTarget() {
+  const target = new Date()
+  target.setDate(target.getDate() + 45)
+  target.setHours(18, 0, 0, 0)
+  return target
+}
+
+function getTimeLeft(targetDate) {
+  const difference = targetDate.getTime() - new Date().getTime()
+
+  if (difference <= 0) {
+    return { days: 0, hours: 0, minutes: 0, seconds: 0 }
+  }
+
+  return {
+    days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+    hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+    minutes: Math.floor((difference / (1000 * 60)) % 60),
+    seconds: Math.floor((difference / 1000) % 60),
+  }
+}
+
 export default function Events() {
+  const [timeLeft, setTimeLeft] = useState(() => getTimeLeft(getCountdownTarget()))
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setTimeLeft(getTimeLeft(getCountdownTarget()))
+    }, 1000)
+
+    return () => window.clearInterval(timer)
+  }, [])
+
   return (
     <section id="events" className="section" aria-label="Past events">
       <div className="container">
@@ -24,6 +54,22 @@ export default function Events() {
           <p>
             A glimpse into the energy we create—balanced, stylish, and smoothly managed.
           </p>
+        </div>
+
+        <div className="countdown-banner" aria-label="Next event countdown">
+          <div>
+            <p className="countdown-label">Next signature event</p>
+            <h3>Luxury planning, curated for your next celebration.</h3>
+            <p className="countdown-copy">Our next showcase experience begins in:</p>
+          </div>
+          <div className="countdown-grid">
+            {Object.entries(timeLeft).map(([unit, value]) => (
+              <div className="countdown-card" key={unit}>
+                <strong>{String(value).padStart(2, '0')}</strong>
+                <span>{unit}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="gallery">
