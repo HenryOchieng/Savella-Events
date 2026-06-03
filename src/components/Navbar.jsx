@@ -55,7 +55,7 @@ export default function Navbar() {
           <span className="brand-mark" aria-hidden>
             S
           </span>
-          <span className="brand-name">Savella</span>
+          <span className="brand-name">Savella Events</span>
         </button>
 
         <nav className="nav-links" aria-label="Primary">

@@ -1,15 +1,18 @@
 import React from 'react'
-
-
+import img1 from '../assets/1.jpeg'
+import img2 from '../assets/2.jpeg'
+import img3 from '../assets/3.jpeg'
 
 const events = [
 
-  { title: 'Corporate Gala', tag: 'Brand Experience', color: 'a' },
-  { title: 'Modern Wedding', tag: 'Décor + Planning', color: 'b' },
-  { title: 'Launch Night', tag: 'Production', color: 'c' },
-  { title: 'Birthday Soirée', tag: 'Private Party', color: 'd' },
-  { title: 'Charity Evening', tag: 'Run-of-Show', color: 'e' },
-  { title: 'Engagement Celebration', tag: 'Coordination', color: 'f' },
+
+  { title: 'Corporate Gala', tag: 'Brand Experience', color: 'a', img: img1 },
+  { title: 'Modern Wedding', tag: 'Décor + Planning', color: 'b', img: img2 },
+  { title: 'Launch Night', tag: 'Production', color: 'c', img: img3 },
+  { title: 'Birthday Soirée', tag: 'Private Party', color: 'd', img: img1 },
+  { title: 'Charity Evening', tag: 'Run-of-Show', color: 'e', img: img2 },
+  { title: 'Engagement Celebration', tag: 'Coordination', color: 'f', img: img3 },
+
 ]
 
 export default function Events() {
@@ -26,12 +29,13 @@ export default function Events() {
         <div className="gallery">
           {events.map((e) => (
             <div key={e.title} className={`gallery-item g-${e.color}`}>
+              <img className="event-img" src={e.img} alt="" loading="lazy" decoding="async" />
               <div className="gallery-top">
                 <div className="gallery-tag">{e.tag}</div>
               </div>
               <div className="gallery-title">{e.title}</div>
-
             </div>
+
           ))}
         </div>
 

@@ -1,12 +1,15 @@
 import React from 'react'
+import img1 from '../assets/1.jpeg'
+import img2 from '../assets/2.jpeg'
+import img3 from '../assets/3.jpeg'
 
 export default function Hero() {
-
 
   return (
     <section id="home" className="section hero" aria-label="Savella hero">
       <div className="container hero-grid">
         <div className="hero-copy">
+
           <div className="pill">Event management • Design • Execution</div>
           <h1 className="hero-title">
             Savella makes every occasion feel
@@ -51,14 +54,14 @@ export default function Hero() {
         </div>
 
         <div className="hero-media" aria-hidden>
-          <div className="media-card media-1" />
-          <div className="media-card media-2" />
-          <div className="media-card media-3" />
+          <img className="hero-img hero-img-1" src={img1} alt="" />
+          <img className="hero-img hero-img-2" src={img2} alt="" />
+          <img className="hero-img hero-img-3" src={img3} alt="" />
           <div className="media-overlay">
-
             <div className="media-badge">Next available date: 3 weeks</div>
           </div>
         </div>
+
 
       </div>
     </section>
