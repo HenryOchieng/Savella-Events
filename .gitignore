@@ -1,0 +1,53 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.cjs
+.pnp.data.json
+
+# production/build outputs
+/dist
+/build
+/out
+
+# cache / temp
+.DS_Store
+.cache
+.tmp
+.temp
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# env files (keep secrets out of git)
+.env
+.env.*
+!.env.example
+
+# Vite / Next / tooling caches
+.vite
+.next
+
+# TypeScript
+*.tsbuildinfo
+
+# IDE/editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*.log
+
+# OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Misc
+coverage
+*.tgz
+
