@@ -270,12 +270,10 @@ input:focus, select:focus, textarea:focus{ border-color: rgba(255,255,255,0.35);
 .footer-links a{ color: var(--muted); border: 1px solid rgba(255,255,255,0.12); padding: 10px 12px; border-radius: 14px; background: rgba(255,255,255,0.04); }
 .footer-links a:hover{ color: var(--text); border-color: rgba(255,255,255,0.28); }
 
-.footer-copy{ color: var(--muted); line-height: 1.6; justify-self:end; }
-
-.footer-social{ display:flex; flex-direction:column; gap:10px; }
-.social-link{ border: 1px solid rgba(255,255,255,0.12); padding: 10px 12px; border-radius: 14px; background: rgba(255,255,255,0.04); color: var(--muted); font-weight: 650; display:flex; align-items:center; gap:10px; justify-content:flex-start; }
-
-.social-link:hover{ color: var(--text); border-color: rgba(255,255,255,0.28); }
+.footer-copy{ color: var(--muted); line-height: 1.6; margin-top: 18px; }
+.footer-social{ display:flex; flex-direction:column; align-items:flex-start; gap:10px; }
+.social-link{ display:inline-flex; align-items:center; justify-content:center; padding: 0; border: 0; background: transparent; color: var(--muted); transition: transform 160ms ease, opacity 160ms ease; }
+.social-link:hover{ color: inherit; transform: translateY(-1px); opacity: 0.9; }
 
 
 /* Responsive */

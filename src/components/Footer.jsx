@@ -46,6 +46,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="social-link"
               aria-label="Instagram"
+              style={{ color: '#E4405F' }}
             >
               <FaInstagram size={24} />
             </a>
@@ -55,6 +56,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="social-link"
               aria-label="TikTok"
+              style={{ color: '#F5F5F5' }}
             >
               <FaTiktok size={24} />
             </a>
@@ -64,6 +66,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="social-link"
               aria-label="Facebook"
+              style={{ color: '#1877F2' }}
             >
               <FaFacebook size={24} />
             </a>
@@ -72,14 +75,15 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="social-link"
-              aria-label="Youtube"
+              aria-label="YouTube"
+              style={{ color: '#FF0000' }}
             >
               <FaYoutube size={24} />
             </a>
 
           </div>
-          <div className="footer-copy">© {new Date().getFullYear()} Savella Events. All rights reserved.</div>
         </div>
+        <div className="footer-copy">© {new Date().getFullYear()} Savella Events. All rights reserved.</div>
       </div>
     </footer>
 
