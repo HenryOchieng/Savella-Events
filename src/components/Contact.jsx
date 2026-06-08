@@ -3,6 +3,7 @@ import React, { useMemo, useState } from 'react'
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', eventType: 'Wedding', date: '', message: '' })
   const [status, setStatus] = useState('')
+  const [submitting, setSubmitting] = useState(false)
 
   const isValid = useMemo(() => {
     const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())
@@ -14,17 +15,35 @@ export default function Contact() {
     setForm((f) => ({ ...f, [name]: value }))
   }
 
-  function onSubmit(e) {
+  async function onSubmit(e) {
     e.preventDefault()
     if (!isValid) {
       setStatus('Please complete the required fields (name, a valid email, and a message).')
       return
     }
 
-    // Demo behavior: no backend. Shows a confirmation.
-    setStatus(
-      `Thanks, ${form.name.split(' ')[0] || form.name}! Your request has been prepared. (Demo form—connect to your backend/API to send.)`,
-    )
+    setSubmitting(true)
+    setStatus('Sending your request...')
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Unable to send the request. Please try again later.')
+      }
+
+      setStatus(`Thanks, ${form.name.split(' ')[0] || form.name}! Your request has been sent. We’ll be in touch soon.`)
+      setForm({ name: '', email: '', phone: '', eventType: 'Wedding', date: '', message: '' })
+    } catch (error) {
+      setStatus(error.message)
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -91,8 +110,8 @@ export default function Contact() {
             </label>
 
             <div className="form-actions">
-              <button type="submit" className="btn btn-primary" disabled={!isValid}>
-                Send request
+              <button type="submit" className="btn btn-primary" disabled={!isValid || submitting}>
+                {submitting ? 'Sending...' : 'Send request'}
               </button>
               <div className="form-note">* Required</div>
             </div>
