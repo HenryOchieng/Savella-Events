@@ -176,7 +176,8 @@ button, input, select, textarea{ font: inherit; }
 
 /* Testimonials */
 .testimonials-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-.testimonial{ margin:0; padding: 18px 16px; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); }
+.testimonial{ margin:0; padding: 18px 16px; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease, box-shadow 180ms ease; }
+.testimonial:hover{ transform: translateY(-2px); border-color: rgba(255,255,255,0.24); background: rgba(255,255,255,0.08); box-shadow: 0 18px 32px rgba(0, 0, 0, 0.35); }
 .testimonial blockquote{ margin:0; color: rgba(255,255,255,0.86); line-height: 1.7; font-weight: 600; }
 .testimonial figcaption{ margin-top: 14px; display:flex; flex-direction:column; gap:2px; }
 .t-name{ font-weight: 900; }
